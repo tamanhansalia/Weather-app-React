@@ -58,7 +58,7 @@ const Maincontainer = () => {
   return (
     <div>
       <div className="flex items-center justify-center h-screen">
-        <div className="bg-slate-900 text-white p-8 m-auto rounded w-96">
+        <div className="bg-gray-900 text-white p-8 m-auto rounded w-96">
           <div className="flex justify-between">
             <input
               ref={inputref}
@@ -75,24 +75,25 @@ const Maincontainer = () => {
           </div>
           <div className="flex justify-center flex-col items-center">
             <img src={weatherData.icon} />
-            <h1 className="font-bold text-4xl">{weatherData.temp}°</h1>
+              <h1 className="font-bold text-4xl mx-2">{weatherData.temp}°</h1>
             <h2 className="font-semibold text-2xl my-1 text-gray-300">
               {weatherData.location}
             </h2>
-            <h2 className="font-medium text-2xl my-1 text-gray-300">
-              {weatherData.description}
-            </h2>
-            <h5 className="my-1 text-gray-300 font-semibold">Feels Like {weatherData.feels_like}°</h5>
+              <h2 className="font-medium text-2xl my-2 text-gray-400">
+                {weatherData.description}
+              </h2>
+
+            <h5 className="my-1 text-gray-300 font-semibold">
+              Feels Like {weatherData.feels_like}°
+            </h5>
           </div>
-          <div className="flex items-center justify-evenly my-5">
-            <img src={wind_weather} />
+          <div className="flex items-center justify-center">
+            <h4 className="text-gray-400 mx-2">Wind Speed :</h4>
             <h4 className="font-semibold">{weatherData.windSpeed} Km/h</h4>
-            <h4 className="text-gray-400">Wind Speed</h4>
           </div>
-          <div className="flex items-center justify-evenly my-5">
-            <img src={humidity_weather} />
-            <h4>{weatherData.humidity}%</h4>
-            <h4 className="text-gray-400">Humidity</h4>
+          <div className="flex items-center justify-center">
+            <h4 className="text-gray-400 mx-2">Humidity : </h4>
+            <h4>  {weatherData.humidity}%</h4>
           </div>
         </div>
       </div>
